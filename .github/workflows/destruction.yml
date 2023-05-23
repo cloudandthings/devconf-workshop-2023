@@ -30,7 +30,7 @@ jobs:
         id: init
         run: terraform init
         env:
-          TF_CLI_ARGS_init: "-backend-config='key=${{ inputs.terraform_state_file_name }}.tfstate'"
+          TF_CLI_ARGS_init: "-backend-config='key=${{ inputs.terraform_state_file_name }}'"
 
       - name: Terraform Destroy Resource
         run: terraform destroy --auto-approve

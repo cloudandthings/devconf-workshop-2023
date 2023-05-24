@@ -5,7 +5,6 @@ on:
       lambda_function_name:
         required: true
         type: string
-        default: "chatgpt-telegram"
 env:
   aws_region: af-south-1
 jobs:

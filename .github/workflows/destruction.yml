@@ -26,6 +26,16 @@ jobs:
         with:
           terraform_wrapper: false
 
+
+      - name: Create and populate terraform.tfvars file
+        run: |
+          rm -fr terraform.tfvars
+          touch terraform.tfvars
+          echo 'function_name = "placeholder"' >> terraform.tfvars
+          echo "" >> terraform.tfvars
+          cat terraform.tfvars
+        shell: bash
+
       - name: Terraform init
         id: init
         run: terraform init

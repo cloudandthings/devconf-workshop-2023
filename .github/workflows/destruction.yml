@@ -36,4 +36,4 @@ jobs:
         run: terraform destroy --auto-approve
 
       - name: Remove state file
-        run: aws s3 rm  s3://devconf-backend-configurations-rnd/${{ inputs.terraform_state_file_name }}
+        run: aws s3 rm  s3://devconf-backend-configurations/${{ inputs.terraform_state_file_name }}

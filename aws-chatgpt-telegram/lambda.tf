@@ -18,7 +18,7 @@ resource "aws_lambda_function" "chatgpt" {
   description   = "Process interaction between ChatGPT and Telegram."
   handler       = "lambda_function.message_handler"
   runtime       = "python3.10"
-
+  reserved_concurrent_executions = 5
   role        = aws_iam_role.lambda_exec_role.arn
   memory_size = 128
   timeout     = 300
